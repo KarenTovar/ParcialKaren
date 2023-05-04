@@ -7,11 +7,17 @@
       <input type="text" matInput placeholder="nombre" formControlName="nombre">
     </mat-form-field>
   </p>
+  <p *ngIf="form.controls['nombre'].invalid && (form.controls['nombre'].dirty || form.controls['nombre'].touched)">
+    Campo Requerido
+  </p>
   
   <p>
     <mat-form-field>
       <input type="text" class="direccion" matInput placeholder="direccion" formControlName="direccion">
     </mat-form-field>
+  </p>
+  <p *ngIf="form.controls['direccion'].invalid && (form.controls['direccion'].dirty || form.controls['direccion'].touched)">
+    Campo Requerido
   </p>
 
   <p>
@@ -19,11 +25,17 @@
       <input type="text" class="telefono" matInput placeholder="telefono" formControlName="telefono">
     </mat-form-field>
   </p>
+  <p *ngIf="form.controls['telefono'].invalid && (form.controls['telefono'].dirty || form.controls['telefono'].touched)">
+    Campo Requerido
+  </p>
 
   <p>
     <mat-form-field>
       <input type="text" class="nit" matInput placeholder="nit" formControlName="nit">
     </mat-form-field>
+  </p>
+  <p *ngIf="form.controls['nit'].invalid && (form.controls['nit'].dirty || form.controls['nit'].touched)">
+    Campo Requerido
   </p>
   
   <p *ngIf="error" class="error">

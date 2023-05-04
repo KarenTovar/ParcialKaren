@@ -16,7 +16,7 @@
       <input type="text" class="telefono" matInput placeholder="telefono" formControlName="telefono">
     </mat-form-field>
   </p>
-  <p *ngIf="form.controls['nombre'].invalid && (form.controls['nombre'].dirty || form.controls['nombre'].touched)">
+  <p *ngIf="form.controls['telefono'].invalid && (form.controls['telefono'].dirty || form.controls['telefono'].touched)">
     Campo Requerido
   </p>
   
@@ -25,7 +25,7 @@
       <input type="text" class="direccion" matInput placeholder="direccion" formControlName="direccion">
     </mat-form-field>
   </p>
-  <p *ngIf="form.controls['nombre'].invalid && (form.controls['nombre'].dirty || form.controls['nombre'].touched)">
+  <p *ngIf="form.controls['direccion'].invalid && (form.controls['direccion'].dirty || form.controls['direccion'].touched)">
     Campo Requerido
   </p>
 
@@ -34,7 +34,7 @@
       <input type="text" class="documento" matInput placeholder="documento" formControlName="documento">
     </mat-form-field>
   </p>
-  <p *ngIf="form.controls['nombre'].invalid && (form.controls['nombre'].dirty || form.controls['nombre'].touched)">
+  <p *ngIf="form.controls['documento'].invalid && (form.controls['documento'].dirty || form.controls['documento'].touched)">
     Campo Requerido
   </p>
   
