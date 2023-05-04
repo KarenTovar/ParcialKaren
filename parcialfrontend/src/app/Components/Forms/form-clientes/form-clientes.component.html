@@ -1,0 +1,54 @@
+<mat-card>
+    <mat-card-title class="title">Post</mat-card-title>
+  <mat-card-content>
+  <form [formGroup]="form" (ngSubmit)="submit()">
+  <p>
+    <mat-form-field class="nombre">
+      <input type="text" matInput placeholder="nombre" formControlName="nombre">
+    </mat-form-field>
+  </p>
+  <p *ngIf="form.controls['nombre'].invalid && (form.controls['nombre'].dirty || form.controls['nombre'].touched)">
+    Campo Requerido
+  </p>
+  
+  <p>
+    <mat-form-field>
+      <input type="text" class="telefono" matInput placeholder="telefono" formControlName="telefono">
+    </mat-form-field>
+  </p>
+  <p *ngIf="form.controls['nombre'].invalid && (form.controls['nombre'].dirty || form.controls['nombre'].touched)">
+    Campo Requerido
+  </p>
+  
+  <p>
+    <mat-form-field>
+      <input type="text" class="direccion" matInput placeholder="direccion" formControlName="direccion">
+    </mat-form-field>
+  </p>
+  <p *ngIf="form.controls['nombre'].invalid && (form.controls['nombre'].dirty || form.controls['nombre'].touched)">
+    Campo Requerido
+  </p>
+
+  <p>
+    <mat-form-field>
+      <input type="text" class="documento" matInput placeholder="documento" formControlName="documento">
+    </mat-form-field>
+  </p>
+  <p *ngIf="form.controls['nombre'].invalid && (form.controls['nombre'].dirty || form.controls['nombre'].touched)">
+    Campo Requerido
+  </p>
+  
+  <p *ngIf="error" class="error">
+    {{ error }}
+  </p>
+  
+  <div class="button">
+    <button type="submit" mat-button>Enviar :v</button>
+  </div>
+  
+  </form>
+  <div *ngIf="error">
+    <p>{{ error }}</p>
+  </div>
+  </mat-card-content>
+  </mat-card>
