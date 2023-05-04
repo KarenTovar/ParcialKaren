@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { MatTableDataSource } from '@angular/material/table';
 import { ApiService } from 'src/app/Services/api.service';
 
 @Component({
@@ -7,9 +8,21 @@ import { ApiService } from 'src/app/Services/api.service';
   styleUrls: ['./farmacia.component.css']
 })
 export class FarmaciaComponent implements OnInit{
-  constructor(public api:ApiService){} 
+  dataSource: MatTableDataSource<any>;
+  data: any[]
+
+  constructor(public api: ApiService) {
+    this.dataSource = new MatTableDataSource();
+  }
+
   ngOnInit(): void {
-    var response=this.api.getAll("Farmaciums")
-    console.log(response);
+    this.GetFarmacia();
+  }
+
+  public async GetFarmacia() {
+    this.api.Get('Farmaciums').then((res) => {
+      this.dataSource.data = res;
+      this.data = res
+    });
   }
 }

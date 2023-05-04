@@ -15,6 +15,17 @@ import { HttpClientModule } from '@angular/common/http';
 import { FarmacosComponent } from './Components/farmacos/farmacos.component';
 import { FarmaciaComponent } from './Components/farmacia/farmacia.component';
 import { ClientesComponent } from './Components/clientes/clientes.component';
+import {MatTableModule} from '@angular/material/table';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import { LoginComponent } from './Components/login/login.component';
+import { TableComponent } from './Components/table/table.component';
+import { FormClientesComponent } from './Components/Forms/form-clientes/form-clientes.component';
+import { FormFarmaciaComponent } from './Components/Forms/form-farmacia/form-farmacia.component';
+import { FormFarmacosComponent } from './Components/Forms/form-farmacos/form-farmacos.component';
+import {MatCardModule} from '@angular/material/card';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -23,7 +34,12 @@ import { ClientesComponent } from './Components/clientes/clientes.component';
     MenuComponent,
     FarmacosComponent,
     FarmaciaComponent,
-    ClientesComponent
+    ClientesComponent,
+    LoginComponent,
+    TableComponent,
+    FormClientesComponent,
+    FormFarmaciaComponent,
+    FormFarmacosComponent
   ],
   imports: [
     HttpClientModule,
@@ -36,7 +52,13 @@ import { ClientesComponent } from './Components/clientes/clientes.component';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatTableModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatPaginatorModule,
+    MatCardModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
